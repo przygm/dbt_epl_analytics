@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: epl_data
+    database: OPTA_DATA_FOOTBALL__SAMPLE
+    schema: EPL
+    tables:
+      - name: GAMEVIEW
+      - name: PLAYERVIEW
+      - name: TEAMVIEW
+      - name: PLAYER_GAME_STATISTICVIEW
+      - name: TEAM_GAME_STATISTICVIEW
