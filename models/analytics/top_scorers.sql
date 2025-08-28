@@ -1,0 +1,6 @@
+SELECT
+  COALESCE(T1.PLAYER_KNOWN_NAME, T1.PLAYER_FIRST_NAME || ' ' || T1.PLAYER_LAST_NAME) AS FULL_NAME,
+  SUM(goals) AS total_goals
+FROM {{ ref('fct_player_stats') }} T1
+GROUP BY FULL_NAME
+ORDER BY total_goals DESC
